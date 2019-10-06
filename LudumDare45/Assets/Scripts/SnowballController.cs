@@ -6,16 +6,22 @@ public class SnowballController : MonoBehaviour
 {
     [Header("Movement Properties")]
     [SerializeField]
-    private float verticalSpeed = 1f;
+    private float maxVerticalSpeed = 1f;
     [SerializeField]
     private float turnSpeed = 5f;
+    private float currentSpeed = 0f;
 
     [Header("Growth Properties")]
     [SerializeField]
     float speedOfGrowth = .02f;
     [SerializeField]
     float maxSize = 3f;
+    [SerializeField]
+    [Range(0.001f, 1f)]
+    float minSizePercentage = .02f;
     Rigidbody rb;
+
+    public float MaxSizePercentage { get { return transform.localScale.x / maxSize; } }
 
     [Header("Control Flags")]
     public bool canGrow = true;
@@ -23,15 +29,15 @@ public class SnowballController : MonoBehaviour
     public bool canMoveVertical = true;
 
     [Header("Spinning Aesthetic")]
-    private ConstantForce constantForce;
+    private ConstantForce constantTorqueForce;
     [SerializeField]
     private float baseTorqueSpeed = 20f;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        rb.useGravity = false;
-        constantForce = GetComponent<ConstantForce>();
+        constantTorqueForce = GetComponent<ConstantForce>();
+        transform.localScale = maxSize * minSizePercentage * Vector3.one;
     }
 
     // Update is called once per frame
@@ -46,10 +52,10 @@ public class SnowballController : MonoBehaviour
     {
         if (canMoveHorizontal)
         {
-            var hor = Input.GetAxisRaw("Horizontal");
+            var hor = Input.GetAxis("Horizontal");
             if (Mathf.Abs(hor) > 0f)
             {
-                ObjectRail.Instance.MoveSnowballHorizontally(hor * turnSpeed);
+                ObjectRail.Instance.MoveSnowballHorizontally(hor * turnSpeed * MaxSizePercentage);
             }
         }
     }
@@ -58,15 +64,16 @@ public class SnowballController : MonoBehaviour
     {
         if (canMoveVertical)
         {
-            ObjectRail.Instance.MoveSnowballVertically(verticalSpeed);
+            ObjectRail.Instance.MoveSnowballVertically(maxVerticalSpeed * MaxSizePercentage);
+            constantTorqueForce.torque = new Vector3(baseTorqueSpeed * MaxSizePercentage, 0f, 0f);
         }
     }
 
     private void CheckForGrow()
     {
-        if (canGrow && transform.localScale.x < maxSize)
+        if (canGrow && canMoveVertical && MaxSizePercentage <= 1f)
         {
-            transform.localScale += new Vector3(speedOfGrowth, speedOfGrowth, speedOfGrowth);
+            ChangeSnow(speedOfGrowth);
         }
     }
 
@@ -74,8 +81,24 @@ public class SnowballController : MonoBehaviour
     {
         canMoveHorizontal = enabled;
         canMoveVertical = enabled;
-        constantForce.torque = enabled ? new Vector3(baseTorqueSpeed, 0f , 0f ) : Vector3.zero;
+        constantTorqueForce.torque = enabled ? new Vector3(baseTorqueSpeed * MaxSizePercentage, 0f, 0f) : Vector3.zero;
     }
 
-    
+    public void ChangeSnow(float snowChangePercentage)
+    {
+        transform.localScale += Vector3.one * snowChangePercentage * maxSize;
+
+        if (MaxSizePercentage > 1f)
+        {
+            transform.localScale = Vector3.one * maxSize;
+        }
+        else if(transform.localScale.x < minSizePercentage * maxSize)
+        {
+            transform.localScale = Vector3.one * minSizePercentage * maxSize;
+        }
+
+        UIManager.Instance.UpdateSnowbar(MaxSizePercentage);
+    }
+
+
 }

@@ -32,6 +32,39 @@ TextureImporter:
   - first:
       213: 7251085685666927666
     second: skier 9
+  - first:
+      213: -2227281364829624047
+    second: skier 10
+  - first:
+      213: 5803912753372437100
+    second: skier 11
+  - first:
+      213: -4772646021624079596
+    second: skier 12
+  - first:
+      213: -9050672415729888388
+    second: skier 13
+  - first:
+      213: 8815110193014047917
+    second: skier 14
+  - first:
+      213: 6413780205337403568
+    second: skier 15
+  - first:
+      213: 4035204010815188997
+    second: skier 16
+  - first:
+      213: -1501306059239737239
+    second: skier 17
+  - first:
+      213: -5078482318291915209
+    second: skier 18
+  - first:
+      213: 5640632795919767720
+    second: skier 19
+  - first:
+      213: -8479723558035803076
+    second: skier 20
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -90,7 +123,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 128
+    maxTextureSize: 256
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -191,8 +224,8 @@ TextureImporter:
       name: skier 4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
+        x: 128
+        y: 96
         width: 32
         height: 32
       alignment: 7
@@ -212,8 +245,8 @@ TextureImporter:
       name: skier 5
       rect:
         serializedVersion: 2
-        x: 32
-        y: 64
+        x: 160
+        y: 96
         width: 32
         height: 32
       alignment: 7
@@ -233,8 +266,8 @@ TextureImporter:
       name: skier 6
       rect:
         serializedVersion: 2
-        x: 64
-        y: 64
+        x: 192
+        y: 96
         width: 32
         height: 32
       alignment: 7
@@ -254,8 +287,8 @@ TextureImporter:
       name: skier 7
       rect:
         serializedVersion: 2
-        x: 96
-        y: 64
+        x: 224
+        y: 96
         width: 32
         height: 32
       alignment: 7
@@ -276,7 +309,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
+        y: 64
         width: 32
         height: 32
       alignment: 7
@@ -297,7 +330,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 32
+        y: 64
         width: 32
         height: 32
       alignment: 7
@@ -309,6 +342,237 @@ TextureImporter:
       bones: []
       spriteID: 234d812630801a460800000000000000
       internalID: 7251085685666927666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skier 10
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 119ab7a366b1711e0800000000000000
+      internalID: -2227281364829624047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skier 11
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6a9f1416e3ab8050800000000000000
+      internalID: 5803912753372437100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skier 12
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41b5a6adab724cdb0800000000000000
+      internalID: -4772646021624079596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skier 13
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 64
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c735ef1f36d856280800000000000000
+      internalID: -9050672415729888388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skier 14
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da4078e1400955a70800000000000000
+      internalID: 8815110193014047917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skier 15
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 64
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b061967d13520950800000000000000
+      internalID: 6413780205337403568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skier 16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 500fedc1baceff730800000000000000
+      internalID: 4035204010815188997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skier 17
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 968bfd7e71a4a2be0800000000000000
+      internalID: -1501306059239737239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skier 18
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73eab1c0d3b9589b0800000000000000
+      internalID: -5078482318291915209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skier 19
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a8573d74ad874e40800000000000000
+      internalID: 5640632795919767720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skier 20
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c34b3c9f958f15a80800000000000000
+      internalID: -8479723558035803076
       vertices: []
       indices: 
       edges: []

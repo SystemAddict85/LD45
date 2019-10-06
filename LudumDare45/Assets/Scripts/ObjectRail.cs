@@ -8,9 +8,7 @@ public class ObjectRail : SimpleSingleton<ObjectRail>
     public List<IHorizontalRailObject> horizontalRailObjects = new List<IHorizontalRailObject>();
 
     public void AddObjectToRail(RailableObject railObject) {
-
-        railObject.transform.parent = transform;
-
+        
         var horizontal = railObject.GetComponent<IHorizontalRailObject>();
         if (horizontal != null)
         {

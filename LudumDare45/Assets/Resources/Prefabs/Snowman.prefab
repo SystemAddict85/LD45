@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 652876748953140693}
   - component: {fileID: 9076058303009386813}
   - component: {fileID: 8110296637364823355}
+  - component: {fileID: 1923574852}
+  - component: {fileID: 6003595585183409886}
   m_Layer: 9
   m_Name: Snowman
   m_TagString: Untagged
@@ -95,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a7f31b41ebae604c9d1104e14bd5cb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  verticalSpeed: 1
+  verticalBaseSpeed: 1
   horizontalBaseSpeed: 1
 --- !u!114 &8110296637364823355
 MonoBehaviour:
@@ -109,3 +111,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e73654b4edf388640913f0f38bc00489, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  snowChangePercentage: 0.25
+--- !u!65 &1923574852
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2889778973206638621}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.46, y: 0.59, z: 0.23}
+  m_Center: {x: 0, y: 0.34, z: 0.02}
+--- !u!95 &6003595585183409886
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2889778973206638621}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5cc1c515e7e10ee4aa1ef6be3409b9d0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
