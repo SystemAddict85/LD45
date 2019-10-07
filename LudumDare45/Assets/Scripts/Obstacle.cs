@@ -4,15 +4,16 @@ using UnityEngine;
 public class Obstacle : MonoBehaviour, IHittableObject, IPoolableObject<Obstacle>
 {
 
-    Animator anim;
+    protected Animator anim;
     bool hasBeenHit = false;
-    private PoolableSpawner<Obstacle> spawner;
+    [HideInInspector]
+    public PoolableSpawner<Obstacle> spawner;
 
     // use negative for snowLoss, positive for gain
     [Range(-1f, 1f)]
     public float snowChangePercentage;
 
-    private void Awake()
+    protected virtual void Awake()
     {
         anim = GetComponentInChildren<Animator>();
     }
@@ -30,10 +31,13 @@ public class Obstacle : MonoBehaviour, IHittableObject, IPoolableObject<Obstacle
             Snowball.Instance.gotHit(this);
     }
 
-    public void OnEnable()
+    public virtual void OnEnable()
     {
         if (anim)
+        {
             anim.ResetTrigger("hit");
+            anim.Play("idle");
+        }
 
         hasBeenHit = false;
     }
@@ -51,13 +55,15 @@ public class Obstacle : MonoBehaviour, IHittableObject, IPoolableObject<Obstacle
     {
         GetComponent<Collider>().enabled = true;
         GetComponentInChildren<SpriteRenderer>().enabled = true;
+        enabled = true;
     }
 
     public void DisablePoolableObject()
     {
         GetComponent<Collider>().enabled = false;
         GetComponentInChildren<SpriteRenderer>().enabled = false;
-        spawner.ReturnToPool(this);
+        enabled = false;
+        spawner.ReturnToPool(this);        
     }
 
     public void SetSpawner(PoolableSpawner<Obstacle> spawner)

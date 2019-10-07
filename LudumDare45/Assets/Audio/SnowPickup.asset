@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e448db6eec5021d4fbc6d7062735690f, type: 3}
+  m_Name: SnowPickup
+  m_EditorClassIdentifier: 
+  soundName: pickup
+  soundEffects:
+  - {fileID: 8300000, guid: de4417222fa7c1445a1fd82fa970357e, type: 3}
+  pitch:
+    minValue: 0.9725598
+    maxValue: 1.2782211
+  volume:
+    minValue: 0.65300447
+    maxValue: 0.9308787

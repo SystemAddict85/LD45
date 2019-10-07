@@ -13,5 +13,8 @@ MonoBehaviour:
   m_Name: GlobalSounds
   m_EditorClassIdentifier: 
   audioObjects:
-  - {fileID: 11400000, guid: 47bce5b1e5f002443a8549308e75ee2c, type: 2}
+  - {fileID: 11400000, guid: 3a2d5d56520f1004d80212234e271514, type: 2}
+  - {fileID: 11400000, guid: 0e23b1d3a88107b4096988dd4084c1f4, type: 2}
+  - {fileID: 11400000, guid: 217d543bfcc7cdf4f8a22b7ab6050aae, type: 2}
+  - {fileID: 11400000, guid: f26413af7410dfd4b91ebe7d8892966b, type: 2}
   - {fileID: 11400000, guid: d693682b1ada1bd4eac1f69a5f22bd49, type: 2}

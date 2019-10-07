@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e73654b4edf388640913f0f38bc00489, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  snowChangePercentage: 0.05
+  snowChangePercentage: 0.025
 --- !u!65 &1943915057
 BoxCollider:
   m_ObjectHideFlags: 0

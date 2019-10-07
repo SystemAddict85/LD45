@@ -9,7 +9,7 @@ public class ObstacleSpawner : PoolableSpawner<Obstacle>
     private RangedFloat minMaxHorizontalSpawnLocation = new RangedFloat();
 
     [SerializeField]
-    [MinMaxRange(0.5f, 30f)]
+    [MinMaxRange(0.01f, 30f)]
     private RangedFloat minMaxTimeBetweenSpawns = new RangedFloat();
 
     private float nextSpawnTime = 0f;
@@ -27,12 +27,12 @@ public class ObstacleSpawner : PoolableSpawner<Obstacle>
     }
     private void Update()
     {
-        if (canSpawn)
+        if (canSpawn && Snowball.Health > 0)
         {
             if (currentTime >= nextSpawnTime)
             {
                 currentTime = 0f;
-                nextSpawnTime = GetRandomSpawnTime();
+                nextSpawnTime = GetRandomSpawnTime() / Snowball.Instance.controller.MaxSizePercentage;
                 GetFromPool();
             }
             else

@@ -38,6 +38,7 @@ public class SnowballController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         constantTorqueForce = GetComponent<ConstantForce>();
         transform.localScale = maxSize * minSizePercentage * Vector3.one;
+        ToggleMovement(false);
     }
 
     // Update is called once per frame
@@ -66,6 +67,7 @@ public class SnowballController : MonoBehaviour
         {
             ObjectRail.Instance.MoveSnowballVertically(maxVerticalSpeed * MaxSizePercentage);
             constantTorqueForce.torque = new Vector3(baseTorqueSpeed * MaxSizePercentage, 0f, 0f);
+            Snowball.Instance.UpdateScore((int)(MaxSizePercentage * Snowball.SCORE_MULTIPLIER_FROM_MOVEMENT));
         }
     }
 
